@@ -5,8 +5,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -17,15 +19,21 @@ public class MainActivity extends ActionBarActivity {
 
         Parse.initialize(this, "kGcB1GjFAh49f0m8Ql3u0WXB8DeYrvkFGiIykRI9", "hpboyAR6eZZnthG9hGgvGDZ6tPUVns38qDkiwdgE");
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            Toast.makeText(getApplicationContext(), "Signed In", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+//        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
