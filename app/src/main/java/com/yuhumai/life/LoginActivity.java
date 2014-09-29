@@ -79,6 +79,8 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
                     signIn();
                 }
             });
+            // Disable plus sign in button
+            mPlusSignInButton.setVisibility(View.GONE);
         } else {
             // Don't offer G+ sign in if the app's version is too low to support Google Play
             // Services.
@@ -273,11 +275,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     @Override
     protected void updateConnectButtonState() {
         //TODO: Update this logic to also handle the user logged in by email.
-        boolean connected = getPlusClient().isConnected();
-
-        mSignOutButtons.setVisibility(connected ? View.VISIBLE : View.GONE);
-        mPlusSignInButton.setVisibility(connected ? View.GONE : View.VISIBLE);
-        mEmailLoginFormView.setVisibility(connected ? View.GONE : View.VISIBLE);
+//        boolean connected = getPlusClient().isConnected();
+//
+//        mSignOutButtons.setVisibility(connected ? View.VISIBLE : View.GONE);
+//        mPlusSignInButton.setVisibility(connected ? View.GONE : View.VISIBLE);
+//        mEmailLoginFormView.setVisibility(connected ? View.GONE : View.VISIBLE);
     }
 
     @Override
