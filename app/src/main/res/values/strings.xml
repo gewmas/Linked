@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Life</string>
+    <string name="app_name">Linked</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_tab_bar">Life Portal</string>
-    <string name="tab_bar_title_finance">Finance</string>
-    <string name="tab_bar_title_package">Package</string>
-    <string name="tab_bar_title_fitness">Fitness</string>
+    <string name="title_activity_tab_bar">Linked</string>
+    <string name="tab_bar_title_finance">Social</string>
+    <string name="tab_bar_title_package">Conversation</string>
+    <string name="tab_bar_title_fitness">Personal</string>
     <string name="menu_item_sign_out">Sign Out</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
